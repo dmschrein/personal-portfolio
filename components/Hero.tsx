@@ -1,6 +1,8 @@
 import React from "react";
 import { Spotlight } from "./ui/Spotlight";
 import { TextGenerateEffect } from "./ui/TextGenerateEffect";
+import MagicButton from "./ui/MagicButton";
+import { FaLocationArrow } from "react-icons/fa";
 
 const Hero = () => {
   return (
@@ -28,16 +30,21 @@ const Hero = () => {
       <div className="flex justify-center relative my-20 z-10">
         <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center">
           <h1 className="uppercase tracking-widest text-4xl text-center text-blue-100 max-w-180">
-Darrel Marie Schreiner
+            Darrel Marie Schreiner
           </h1>
-          <TextGenerateEffect 
+          <TextGenerateEffect
             className="text-center text-[60px] md:text-6xl lg:text-8xl"
             words="Software Engineer"
           />
           <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
             Hi, I&apos;m Darrel, a Fullstack Developer based in Los Angeles, CA.
-
           </p>
+          <a href="#about">
+            <MagicButton title="Show my work" 
+            icon={<FaLocationArrow />}
+            position='right'
+            />
+          </a>
         </div>
       </div>
     </div>
