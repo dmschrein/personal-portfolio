@@ -38,7 +38,7 @@ const Hero = () => {
             Hi, I&apos;m Darrel Schreiner, a Fullstack Software Engineer based
             in Los Angeles, CA.
           </p>
-          <a href="#awdad">
+          <a href="#projects">
             <MagicButton
               title="show my work"
               icon={<FaLocationArrow />}
