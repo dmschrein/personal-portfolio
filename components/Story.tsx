@@ -37,9 +37,16 @@ const Story = () => {
             enjoying the outdoors with family and friends.
           </p>
         </div>
-        <div className="col-span-7 lg:col-span-7 lg:overflow-y-auto lg:h-96 lg:pl-4 mt-8 lg:mt-0">
+        <div className="col-span-7 lg:col-span-7 lg:h-96 lg:pl-4 mt-8 lg:mt-0">
           {/* Use the imported Experience component here */}
-          <Experience />
+          {/* <Experience /> */}
+          <div className="w-[500px] h-[500px] relative">
+            <img
+              src="/about-image.jpeg"
+              alt="hero image"
+              className="rounded-full w-full h-full object-cover"
+            />
+          </div>
         </div>
       </div>
     </div>

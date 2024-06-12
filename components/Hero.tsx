@@ -1,8 +1,10 @@
+"use client";
 import React from "react";
 import { Spotlight } from "./ui/Spotlight";
 import { TextGenerateEffect } from "./ui/TextGenerateEffect";
 import MagicButton from "./ui/MagicButton";
 import { FaLocationArrow } from "react-icons/fa";
+import { TypeAnimation } from "react-type-animation";
 
 const Hero = () => {
   return (
@@ -25,7 +27,7 @@ const Hero = () => {
       </div>
       <div className="flex justify-center relative my-20 z-10">
         <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center">
-          <h2 className="uppercase tracking-widest text-xs text-center text-blue-100 max-w-80">
+          {/* <h2 className="uppercase tracking-widest text-xs text-center text-blue-100 max-w-80">
             Let&apos;s Make Something Great
           </h2>
 
@@ -37,7 +39,37 @@ const Hero = () => {
           <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
             Hi, I&apos;m Darrel Schreiner, a Fullstack Software Engineer based
             in Los Angeles, CA.
-          </p>
+          </p> */}
+          <h1 className="text-center text-white mb-4 text-4xl sm:text-5xl lg:text-6xl font-extrabold">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500">
+              Hello, I&apos;m{" "}
+            </span>
+            
+            <br></br>
+            <TypeAnimation
+              sequence={[
+                // Same substring at the start will only be typed out once, initially
+                "Darrel",
+                1000, // wait 1s before replacing "Mice" with "Hamsters"
+                "a Full Stack Developer",
+                1000,
+                "an AI/ML Engineer",
+                1000,
+                "a DevOps Engineer",
+                1000,
+              ]}
+              wrapper="span"
+              speed={50}
+              repeat={Infinity}
+            />
+          </h1>
+          <div>
+            <p className="text-center text-[#ADB&BE] text-base sm:text-lg mb-6 lg:text-xl">
+              I'm a software engineer with extensive experience in developing
+              enterprise-level applications and innovative solutions.
+            </p>
+          </div>
+          <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
           <a href="#projects">
             <MagicButton
               title="show my work"
@@ -45,6 +77,15 @@ const Hero = () => {
               position="right"
             />
           </a>
+            <a href="mailto:darrelmschreiner@gmail.com">
+              <MagicButton
+                title="Download CV"
+                icon={<FaLocationArrow />}
+                position="right"
+              />
+            </a>
+          </div>
+          
         </div>
       </div>
     </div>
