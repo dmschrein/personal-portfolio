@@ -2,16 +2,15 @@
 import React from "react";
 import MagicButton from "./ui/MagicButton";
 import { FaLocationArrow } from "react-icons/fa";
-import { TypeAnimation } from "react-type-animation";
 
 const About = () => {
   return (
-    <div className="w-full pb-20 pt-36 lg:pt-36">
-      <h1 className="heading text-center lg:text-left mb-12">
+    <div className="py-20 w-full">
+      <h1 className="heading">
         More about <span className="text-purple">me...</span>
       </h1>
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
-        <div className="col-span-5 place-self-center flex justify-center lg:justify-start">
+        <div className="col-span-5 flex justify-center lg:justify-start">
           <div className="w-[300px] h-[300px] lg:w-[400px] lg:h-[400px] relative">
             <img
               src="/about-image.jpeg"
@@ -20,6 +19,7 @@ const About = () => {
             />
           </div>
         </div>
+        
         <div className="col-span-7 text-gray-400 text-center lg:text-left">
           <p className="mb-4">
             Back in 2016, I co-founded an e-commerce brand, diving headfirst into the world of sustainable fashion and innovative design. This journey not only ignited my passion for technology but also led me to enhance my skills in software development.
