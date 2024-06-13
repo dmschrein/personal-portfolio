@@ -96,11 +96,11 @@ export const projects = [
   },
   {
     id: 4,
-    title: "Animated Apple Iphone 3D Website",
-    des: "Recreated the Apple iPhone 15 Pro website, combining GSAP animations and Three.js 3D effects..",
+    title: "TechNotes - Note Management System",
+    des: "Developed a fullstack MERN note management system feat. user authentication, role-based access control, and optimized interface for desktop and mobile.",
     img: "/p4.svg",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
-    link: "https://github.com/adrianhajdin/iphone",
+    iconLists: ["/re.svg", "/js.svg", "/css.svg", "/html.svg", "/rr.svg"],
+    link: "https://github.com/dmschrein/techNotes",
   },
 ];
 
@@ -175,7 +175,7 @@ export const workExperience = [
     id: 1,
     title: "Software Engineer - Dell Technologies",
     date: "Oct 2020 - Feb 2021",
-    desc: "Developed an enterprise-level telecommunication infrastructure management application. I also led the development of a remote serviceability feature, enhanced deployment efficiency by 20% with automated OS deployment, and prioritized Docker image security management, reducing vulnerabilities by 50%.",
+    desc: "Developed an enterprise-level telecommunication infrastructure management application. Led the development of a remote serviceability feature, enhanced deployment efficiency with automated OS deployment, and prioritized Docker image security management, reducing vulnerabilities.",
     className: "md:col-span-2",
     thumbnail: "/exp1.svg",
   },
@@ -183,26 +183,35 @@ export const workExperience = [
     id: 2,
     title: "ML Software Engineer- CAKE DENIM",
     date: "Oct 2016 - June 2022",
-    desc: "Designed and developed mobile app for both iOS & Android platforms using React Native.",
+    desc: "Research, modify, and apply data science and data analytics prototypes to enahnce personalized marketing strategies and financial scoring models. Implemented ML tool and algorithms to imporve user expereince and boost conversion rates.",
     className: "md:col-span-2", // change to md:col-span-2
     thumbnail: "/exp2.svg",
   },
   {
     id: 3,
-    title: "Freelance App Dev Project",
-    date: "Oct 2020 - Feb 2021",
-    desc: "Led the dev of a mobile app for a client, from initial concept to deployment on app stores.",
+    title: "Artificial Intelligence Teacher Assistant",
+    date: "Sep 2021 - Dec 2021",
+    desc: "Evaluate and revise lesson plans, course content, and assignments to facilitate and moderate classroom discussions.",
+    className: "md:col-span-2",
+    thumbnail: "/exp4.svg",
+  },
+  {
+    id: 4,
+    title: "Software Engineer Co-op - National Research Council",
+    date: "May 2021 - Dec 2021",
+    desc: "Designed cloud-integrated language automatic speech recognition web application for AI research using JavaScript, Python, React, AWS, and Flask.",
     className: "md:col-span-2", // change to md:col-span-2
     thumbnail: "/exp3.svg",
   },
   {
-    id: 4,
-    title: "Lead Frontend Developer",
+    id: 5,
+    title: "Software Engineer Intern - Properly, Real Estate Startup",
     date: "Oct 2020 - Feb 2021",
-    desc: "Developed and maintained user-facing features using modern frontend technologies.",
+    desc: "Reorganized SQL databases, optimized data retrieval processes, and improved team efficiency.",
     className: "md:col-span-2",
-    thumbnail: "/exp4.svg",
+    thumbnail: "/exp5.svg",
   },
+
 ];
 
 export const socialMedia = [

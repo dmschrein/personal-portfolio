@@ -54,13 +54,13 @@ const Story = () => {
                   position="right"
                 />
               </a>
-              <a href="mailto:darrelmschreiner@gmail.com">
-                <MagicButton
-                  title="Download CV"
-                  icon={<FaLocationArrow />}
-                  position="right"
-                />
-              </a>
+              <a href="/resume.pdf" download="Darrel_Schreiner_Resume.pdf">
+              <MagicButton
+                title="Download CV"
+                icon={<FaLocationArrow />}
+                position="right"
+              />
+            </a>
             </div>
           </div>
         </div>
