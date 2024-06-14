@@ -4,7 +4,17 @@ const nextConfig = {
   // output: 'export',
   typescript: {
     ignoreBuildErrors: true,
-  }
+  },
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'darrelmarie.me', 
+        port: '',
+        pathname: '/**',
+      },
+    ],
+  },
 };
 
 export default withSentryConfig(nextConfig, {
