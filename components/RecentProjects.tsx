@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import Image from 'next/image'
+import Image from 'next/image';
 
 import { projects } from "@/data";
 import { PinContainer } from "./ui/3d-pin";
@@ -27,9 +27,9 @@ const RecentProjects = () => {
             <PinContainer title={title}>
               <div className="relative flex items-center justify-center sm:w-[570px] w-[80vw] overflow-hidden sm:h-[40vh] h-[30vh] mb-10">
                 <div className="relative w-full h-full overflow-hidden lg:rounded-3xl bg-[#13162d]">
-                  <Image src="/bg.png" height={100} width={800} alt="bg-img" />
+                  <Image src="/bg.png" layout="fill" objectFit="cover" alt="bg-img" />
                 </div>
-                <Image src={img} alt={title} height={400} width={800} className="z-10 absolute bottom-0" />
+                <Image src={img} alt={title} layout="fill" objectFit="contain" className="z-10 absolute bottom-0" />
               </div>
               <h1 className="font-bold lg:text-2xl md:text-xl text-base line-clamp-1">
                 {title}
