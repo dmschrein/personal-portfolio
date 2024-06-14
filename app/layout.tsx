@@ -1,34 +1,34 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "./globals.css";
-import { ThemeProvider } from "./provider";
+import { Inter } from 'next/font/google';
+import './globals.css';
+import { ThemeProvider } from './provider';
+import ClientRoot from '@/components/ClientRoot'; // Adjust the path as needed
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ['latin'] });
 
-export const metadata: Metadata = {
+export const metadata = {
   title: "Darrel's Portfolio",
   description: "Modern & Minimalist Software Engineer's Portfolio",
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
-    <>
-      <html lang="en" suppressHydrationWarning>
-        <body className={inter.className}>
-          <ThemeProvider
-            attribute="class"
-            defaultTheme="dark"
-            enableSystem={true}
-            disableTransitionOnChange={true}
-          >
+    <html lang="en">
+      <body className={inter.className}>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+          enableSystem={true}
+          disableTransitionOnChange={true}
+        >
+          <ClientRoot>
             {children}
-          </ThemeProvider>
-        </body>
-      </html>
-    </>
+          </ClientRoot>
+        </ThemeProvider>
+      </body>
+    </html>
   );
 }
