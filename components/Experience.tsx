@@ -46,6 +46,15 @@ const Experience = () => {
                 <p className="text-start text-white-100 mt-3 font-semibold">
                   {card.desc}
                 </p>
+                {/* language icons */}
+                <div className="flex flex-wrap mt-4 space-x-2">
+                  {card.languages.map((language, i) => (
+                    <div key={i} className="bg-pink-700 text-white rounded-full px-3 py-1 text-sm mb-2 opacity-100">
+                      {language}
+                    </div>
+                  ))}
+                </div>
+
               </div>
             </div>
           </Button>

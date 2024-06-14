@@ -8,7 +8,7 @@ const Clients = () => {
     <div className="py-20" id="testimonials">
       <h1 className="heading">
         Kind words from
-        <span className="text-purple"> satisfied clients</span>
+        <span className="text-purple"> clients and colleagues</span>
       </h1>
       {/* Projects container */}
       <div className="flex flex-col items-center justify-center max-lg:mt-10">
@@ -17,7 +17,7 @@ const Clients = () => {
           direction="right"
           speed="slow"
         />
-        <div className="flex flex-wrap items-center justify-center gap-4 md:gap-16 max-lg: mt-10">
+        {/* <div className="flex flex-wrap items-center justify-center gap-4 md:gap-16 max-lg: mt-10">
           {companies.map(({id, img, name, nameImg}) => (
             <div key={id} className="flex md:max-2-60 max-w-32 gap-2">
               <img
@@ -32,7 +32,7 @@ const Clients = () => {
               />
             </div>
           ))}
-        </div>
+        </div> */}
       </div>
     </div>
   );

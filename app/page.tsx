@@ -10,6 +10,7 @@ import Approach from "@/components/Approach"
 import Footer from "@/components/Footer"
 import About from "@/components/About";
 import Story from "@/components/Story";
+import Skills from "@/components/Skills";
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
         <Hero />
         {/* <Grid />  */}
         <Story />
+        <Skills />
         {/* <About /> */}
         <Experience />
        
