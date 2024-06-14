@@ -8,7 +8,6 @@ import { navItems } from "@/data";
 import Experience from "@/components/Experience";
 import Approach from "@/components/Approach"
 import Footer from "@/components/Footer"
-import About from "@/components/About";
 import Story from "@/components/Story";
 import Skills from "@/components/Skills";
 
@@ -21,7 +20,6 @@ export default function Home() {
         {/* <Grid />  */}
         <Story />
         <Skills />
-        {/* <About /> */}
         <Experience />
         <RecentProjects />
         <Clients />

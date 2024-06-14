@@ -14,7 +14,7 @@ const Skills = () => {
   return (
     <div className="py-20 w-full">
       <h1 className="heading">
-        Skills, languages, and tools <span className="text-purple">I've worked with</span>
+        Skills, languages, and tools <span className="text-purple">I&apos;ve worked with</span>
       </h1>
       {/* Filter buttons */}
       <h2 className="flex justify-center gap-8 my-8 rounded-full">

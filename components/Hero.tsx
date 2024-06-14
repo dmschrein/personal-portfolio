@@ -6,6 +6,7 @@ import MagicButton from "./ui/MagicButton";
 import { FaLocationArrow } from "react-icons/fa";
 import { TypeAnimation } from "react-type-animation";
 import { socialMedia } from "@/data";
+import Image from "next/image";
 
 const Hero = () => {
   return (
@@ -54,7 +55,7 @@ const Hero = () => {
           </h1>
           <div>
             <p className="text-center text-[#ADB&BE] text-base sm:text-lg mb-6 lg:text-xl">
-              I'm a software engineer with extensive experience in developing
+              I&apos;m a software engineer with extensive experience in developing
               enterprise-level applications and innovative solutions.
             </p>
           </div>
@@ -81,7 +82,7 @@ const Hero = () => {
             target="_blank"
             rel="noopener noreferrer"
             className="w-10 h-10 cursor-pointer flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 bg-black-200 rounded-lg border border-black-300">
-              <img src={info.img} alt={"icons"} width={20} height={20}/>
+              <Image src={info.img} alt={"icons"} width={20} height={20}/>
               </a>
           ))}
         </div>

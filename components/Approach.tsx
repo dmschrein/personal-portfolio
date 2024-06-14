@@ -1,8 +1,7 @@
 "use client";
 import React from "react";
-
 import { AnimatePresence, motion } from "framer-motion";
-import { CanvasRevealEffect } from "@/components/ui/CanvasRevealEffect";
+import CanvasRevealEffect from "@/components/ui/CanvasRevealEffect";
 
 const Approach = () => {
   return (
@@ -17,43 +16,33 @@ const Approach = () => {
           description="We'll collaborate to map out your website's goals, target audience, 
           and key functionalities. We'll discuss things like site structure, 
           navigation, and content requirements."
-        >
-          <CanvasRevealEffect
-            animationSpeed={5.1}
-            containerClassName="bg-emerald-900"
-          />
-        </Card>
+          animationSpeed={5.1}
+          containerClassName="bg-emerald-900"
+        />
         <Card
           title="Development & Progress Update"
           icon={<AceternityIcon order="Phase 2" />}
           description="Once we agree on the plan, I cue my lofi playlist and dive into
           coding. From initial sketches to polished code, I keep you updated
           every step of the way."
-        >
-          <CanvasRevealEffect
-            animationSpeed={3}
-            containerClassName="bg-black"
-            colors={[
-              [236, 72, 153],
-              [232, 121, 249],
-            ]}
-            dotSize={2}
-          />
-          
-        </Card>
+          animationSpeed={3}
+          containerClassName="bg-black"
+          colors={[
+            [236, 72, 153],
+            [232, 121, 249],
+          ]}
+          dotSize={2}
+        />
         <Card
           title="Development & Launch"
           icon={<AceternityIcon order="Phase 3" />}
           description="This is where the magic happens! Based on the approved design, 
           I'll translate everything into functional code, building your project
           from the ground up."
-        >
-          <CanvasRevealEffect
-            animationSpeed={3}
-            containerClassName="bg-sky-600"
-            colors={[[125, 211, 252]]}
-          />
-        </Card>
+          animationSpeed={3}
+          containerClassName="bg-sky-600"
+          colors={[[125, 211, 252]]}
+        />
       </div>
     </section>
   );
@@ -62,20 +51,35 @@ const Approach = () => {
 const Card = ({
   title,
   icon,
-  children,
-  description
+  description,
+  animationSpeed,
+  containerClassName,
+  colors,
+  dotSize,
 }: {
   title: string;
   icon: React.ReactNode;
-  children?: React.ReactNode;
   description: string;
+  animationSpeed: number;
+  containerClassName: string;
+  colors?: number[][];
+  dotSize?: number;
 }) => {
   const [hovered, setHovered] = React.useState(false);
+
+  const getUniforms = () => {
+    return {
+      u_time: { value: 0, type: "1f" },
+      u_resolution: { value: [window.innerWidth, window.innerHeight], type: "2fv" },
+      // Add other uniforms as needed
+    };
+  };
+
   return (
     <div
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
-      className="border border-black/[0.2] group/canvas-card flex items-center justify-center dark:border-white/[0.2]  max-w-sm w-full mx-auto p-4 lg:h-[35rem] relative rounded-3xl"
+      className="border border-black/[0.2] group/canvas-card flex items-center justify-center dark:border-white/[0.2] max-w-sm w-full mx-auto p-4 lg:h-[35rem] relative rounded-3xl"
     >
       <Icon className="absolute h-6 w-6 -top-3 -left-3 dark:text-white text-black" />
       <Icon className="absolute h-6 w-6 -bottom-3 -left-3 dark:text-white text-black" />
@@ -89,7 +93,13 @@ const Card = ({
             animate={{ opacity: 1 }}
             className="h-full w-full absolute inset-0"
           >
-            {children}
+            <CanvasRevealEffect
+              animationSpeed={animationSpeed}
+              containerClassName={containerClassName}
+              colors={colors}
+              dotSize={dotSize}
+              getUniforms={getUniforms}
+            />
           </motion.div>
         )}
       </AnimatePresence>
@@ -100,13 +110,12 @@ const Card = ({
         >
           {icon}
         </div>
-        <h2 className="dark:text-white text-3xl opacity-0 group-hover/canvas-card:opacity-100 relative z-10 text-black mt-4  font-bold group-hover/canvas-card:text-white group-hover/canvas-card:-translate-y-2 transition duration-200 text-center">
+        <h2 className="dark:text-white text-3xl opacity-0 group-hover/canvas-card:opacity-100 relative z-10 text-black mt-4 font-bold group-hover/canvas-card:text-white group-hover/canvas-card:-translate-y-2 transition duration-200 text-center">
           {title}
         </h2>
-        <h2 className="text-sm dark:text-white opacity-0 group-hover/canvas-card:opacity-100 relative z-10 text-black mt-4  font-bold group-hover/canvas-card:text-white group-hover/canvas-card:-translate-y-2 transition duration-200 text-center"
-        style={{ color: '#e4ecff'}}>
+        <p className="text-sm dark:text-white opacity-0 group-hover/canvas-card:opacity-100 relative z-10 text-black mt-4 font-bold group-hover/canvas-card:text-white group-hover/canvas-card:-translate-y-2 transition duration-200 text-center" style={{ color: '#e4ecff'}}>
           {description}
-        </h2>
+        </p>
       </div>
     </div>
   );

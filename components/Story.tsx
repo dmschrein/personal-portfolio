@@ -3,6 +3,7 @@ import React from "react";
 import MagicButton from "./ui/MagicButton";
 import { FaLocationArrow } from "react-icons/fa";
 import { cn } from "@/utils/cn";
+import Image from "next/image";
 
 const Story = () => {
   return (
@@ -26,9 +27,11 @@ const Story = () => {
 
           {/* Profile image */}
           <div className="w-[300px] h-[300px] lg:w-[400px] lg:h-[400px] relative mx-auto lg:mx-0">
-            <img
+            <Image
               src="/about-image.jpeg"
               alt="hero image"
+              height={300}
+              width={300}
               className="rounded-full w-full h-full object-cover"
             />
           </div>
