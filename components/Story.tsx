@@ -6,7 +6,7 @@ import { cn } from "@/utils/cn";
 
 const Story = () => {
   return (
-    <div className="py-20 w-full">
+    <div className="py-10 w-full">
       <div
         className={cn(
           "relative overflow-hidden rounded-3xl border border-white/[0.1] group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none flex flex-col lg:flex-row space-y-4 lg:space-y-0 lg:space-x-4 p-8",

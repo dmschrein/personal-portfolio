@@ -5,6 +5,7 @@ import { TextGenerateEffect } from "./ui/TextGenerateEffect";
 import MagicButton from "./ui/MagicButton";
 import { FaLocationArrow } from "react-icons/fa";
 import { TypeAnimation } from "react-type-animation";
+import { socialMedia } from "@/data";
 
 const Hero = () => {
   return (
@@ -27,19 +28,7 @@ const Hero = () => {
       </div>
       <div className="flex justify-center relative my-20 z-10">
         <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center">
-          {/* <h2 className="uppercase tracking-widest text-xs text-center text-blue-100 max-w-80">
-            Let&apos;s Make Something Great
-          </h2>
 
-          <TextGenerateEffect
-            className="text-center text-[40px] md:text-5xl lg:text-6xl"
-            words="Transforming Concepts into Seamless User Experiences."
-          />
-
-          <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
-            Hi, I&apos;m Darrel Schreiner, a Fullstack Software Engineer based
-            in Los Angeles, CA.
-          </p> */}
           <h1 className="text-center text-white mb-4 text-4xl sm:text-5xl lg:text-6xl font-extrabold">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500">
               Hello, I&apos;m{" "}
@@ -85,6 +74,17 @@ const Hero = () => {
               />
             </a>
           </div>
+          <div className="flex items-center md:gap-3 gap-6 mt-10">
+          {socialMedia.map((info) => (
+            <a key={info.id} 
+            href={info.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-10 h-10 cursor-pointer flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 bg-black-200 rounded-lg border border-black-300">
+              <img src={info.img} alt={"icons"} width={20} height={20}/>
+              </a>
+          ))}
+        </div>
           
         </div>
       </div>
