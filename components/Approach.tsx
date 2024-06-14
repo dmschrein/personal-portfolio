@@ -45,7 +45,7 @@ const Approach = () => {
           title="Development & Launch"
           icon={<AceternityIcon order="Phase 3" />}
           description="This is where the magic happens! Based on the approved design, 
-          I'll translate everything into functional code, building your website
+          I'll translate everything into functional code, building your project
           from the ground up."
         >
           <CanvasRevealEffect
