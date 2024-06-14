@@ -9,36 +9,25 @@ const Story = () => {
   return (
     <div className="py-10 w-full">
       <div
-        className={cn(
-          "relative overflow-hidden rounded-3xl border border-white/[0.1] group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none flex flex-col lg:flex-row space-y-4 lg:space-y-0 lg:space-x-4 p-8",
-          "lg:min-h-[40vh]"
-        )}
+        className="relative overflow-hidden rounded-3xl border border-white/[0.1] group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none flex flex-col lg:flex-row space-y-4 lg:space-y-0 lg:space-x-4 p-8 lg:min-h-[40vh]"
         style={{
           background: "rgb(4,7,29)",
           backgroundColor:
             "linear-gradient(90deg, rgba(4,7,29,1) 0%, rgba(12,14,35,1) 100%)",
         }}
       >
-        {/* Profile image and header container */}
         <div className="flex-none lg:w-1/3 flex flex-col items-center lg:items-start">
-          {/* Heading */}
           <h1 className="heading mb-4 text-center lg:text-left w-full">
             More about <span className="text-purple">me...</span>
           </h1>
-
-          {/* Profile image */}
           <div className="w-[400px] h-[400px] relative mx-auto lg:mx-0">
-            <Image
+            <img
               src="/about.png"
               alt="hero image"
-              height={400}
-              width={400}
               className="rounded-full w-full h-full object-cover"
             />
           </div>
         </div>
-
-        {/* Text content */}
         <div className="flex-1 text-center lg:text-left text-gray-400 lg:pl-8">
           <p className="mb-4">
             Back in 2016, I co-founded an e-commerce brand, diving headfirst
